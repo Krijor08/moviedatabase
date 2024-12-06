@@ -1,5 +1,5 @@
 USE movies;
-SELECT * FROM movies;
+SELECT * FROM movie;
 
 CREATE TABLE IF NOT EXISTS soundtracks (
 	song_id INT NOT NULL AUTO_INCREMENT,
@@ -10,10 +10,12 @@ CREATE TABLE IF NOT EXISTS soundtracks (
     FOREIGN KEY (movie_id) REFERENCES movies.movie_id
 );
 
-INSERT INTO movies (movie_name, release_date, rating)
+INSERT INTO movies_has_genres (movies_movie_id, genres_genre_id)
 VALUES 
-	('Smokey and the Bandit', '1977-05-19', 70),
-	('', '', 1)
+	(2, 1),
+    (2, 2),
+    (3, 1),
+    (3, 2)
 ;
 
 INSERT INTO genres (name)
@@ -21,5 +23,16 @@ VALUES
 	('action'),
     ('comedy'),
     ('horror'),
-    ('documentary')
+    ('documentary'),
+    ('romance'),
+    ('musical')
 ;
+
+INSERT INTO actors (first_name, last_name, age, still_alive)
+VALUES 
+	('Burt', 'Reynolds', 82, FALSE),
+    ('Jerry', 'Reed', 71, FALSE),
+    ('Sally', 'Field', NULL, TRUE),
+    ('Jackie', 'Gleason', 71, FALSE);
+
+SELECT * FROM actors;
