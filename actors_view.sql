@@ -3,7 +3,7 @@ CREATE OR REPLACE VIEW actor AS
 	FROM movie
 	JOIN movies_has_actors ON movie.movie_id = movies_has_actors.movies_movie_id
 	JOIN actors ON actors.actor_id = movies_has_actors.actors_actor_id
-	ORDER BY movie
 ;
 
-SELECT * FROM actor;
+SELECT * FROM actor
+ORDER BY movie;

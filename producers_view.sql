@@ -3,7 +3,7 @@ CREATE OR REPLACE VIEW producer AS
 	FROM movie
 	JOIN movies_has_producers ON movie.movie_id = movies_has_producers.movies_movie_id
 	JOIN producers ON producers.producer_id = movies_has_producers.producers_producer_id
-	ORDER BY movie_id
 ;
 
-SELECT * FROM producer;
+SELECT * FROM producer
+ORDER BY movie_id;

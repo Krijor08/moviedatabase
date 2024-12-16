@@ -9,9 +9,15 @@ CREATE TABLE IF NOT EXISTS soundtracks (
     FOREIGN KEY (movies_id) REFERENCES movie(movie_id)
 );
 
-SELECT * FROM movie;SELECT * FROM soundtracks;
+SELECT * FROM actors;
+SELECT * FROM directors;
+SELECT * FROM genres;
+SELECT * FROM movie;
+SELECT * FROM movies_has_actors;
+SELECT * FROM movies_has_directors;
 SELECT * FROM movies_has_genres;
-
-
-ALTER TABLE soundtracks
-ADD COLUMN performers VARCHAR(60);
+SELECT * FROM movies_has_producers;
+SELECT * FROM performers_etc;
+SELECT * FROM producers;
+SELECT * FROM roles;
+SELECT * FROM soundtracks;
