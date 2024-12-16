@@ -21,3 +21,5 @@ SELECT * FROM performers_etc;
 SELECT * FROM producers;
 SELECT * FROM roles;
 SELECT * FROM soundtracks;
+
+DESC soundtracks;
